@@ -1,0 +1,47 @@
+.cart{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 1px 3px #888888;
+    margin-right: 2%;
+    background-color: rgb(236, 234, 231);
+}
+.mapcart{
+    padding-top: 10px;
+}
+.cartbtn{
+    border: none;
+    background-color: rgb(236, 234, 231);
+}
+.cardetails{
+    margin-top: 20px;
+}
+.cartbox{
+    margin-left: -50%;
+    border: 1px solid;
+    margin-right: 75%;
+    margin-left: 33px;
+    box-shadow: 1px 3px #888888;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(236, 234, 231);
+
+}
+.cartdetails1{
+   
+    margin-left: -51%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.cartdetails2{
+    
+    margin-left: -27%;
+    
+}
+.cartdetails3{
+    
+    margin-left: -15%;
+    margin-bottom: 5%;
+}
+.line{
+    margin-left: 13%;
+}
