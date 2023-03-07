@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useGirlsWorldCart from '../../hooks/useGirlsWorldCart';
 import FirstNevigation from '../Shared/FirstNevigation/FirstNevigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css'
-import { Button, Grid } from '@mui/material';
+import { Alert, Button, Grid } from '@mui/material';
 import Calender from '../Shared/Calender/Calender';
+import BookingModal from '../BookingModal/BookingModal';
 
 const Cart = ({date,setDate}) => {
+    const [bookingSuccess,setBookingSuccess] = useState(false);
     const { cart, decreaseQuantity, increaseQuantity, removeItem, clearCart } = useGirlsWorldCart();
+    const [openBooking,setBookingOpen] = React.useState(false);
+    const handleBookingOpen=()=>setBookingOpen(true);
+    const handleBookungClose=()=>setBookingOpen(false);
+
     
     return (
+        <>
         <div>
             <FirstNevigation />
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+            
             <div className='cartbox'>
             <h5 className='cartdetails1'>Cart Details</h5>
             <h6 className='cartdetails2'>Total Items: - - - - - - - - - - - - - {cart.length} </h6>
@@ -21,20 +27,19 @@ const Cart = ({date,setDate}) => {
                         
                         <h6 className='cartdetails3'>Total Price: - - - - - - - - - - - - - {cart.reduce((data, currentValue) => {
                             return data = data + currentValue.quantity * parseFloat(currentValue?.price.split('$')[0])
-                        }, 0)} Tk <hr className='line'></hr></h6>
+                        }, 0)} $ <hr className='line'></hr></h6>
                     </div>
                     <h6>Grant Total :  {cart.reduce((data, currentValue) => {
                             return data = data + currentValue.quantity * parseFloat(currentValue?.price.split('$')[0])
-                        }, 0)} </h6>
+                        }, 0)}$ </h6>
                         
-                    <Button>Checkout</Button><Button onClick={() => clearCart()}>clear cart</Button>
+                    <Button onClick={handleBookingOpen}>Checkout</Button><Button onClick={() => clearCart()}>clear cart</Button>
 
             </div>
-            </Grid>
-            <Grid item xs={12} md={6}>
-                <Calender date={date} setDate={setDate}></Calender>
-            </Grid>
-            </Grid>
+            {bookingSuccess && <Alert severity="success">Booking successfully</Alert>}
+            
+            
+           
             {
                 cart.length > 0 && <ul>
                     {
@@ -46,7 +51,7 @@ const Cart = ({date,setDate}) => {
                                     <h6 className='cardetails'>{item?.name}</h6>
                                     <p className='cardetails'>price: {item?.price} /unit</p>
                                     <p className='cardetails'>quantity: {item?.quantity}</p>
-                                    <p className='cardetails'>Total price: {typeof (item?.price) === "string" ? parseFloat(item?.price.split('$')[0]) * item?.quantity : parseFloat(item?.price) * item?.quantity} </p>
+                                    <p className='cardetails'>Total price: {typeof (item?.price) === "string" ? parseFloat(item?.price.split('$')[0]) * item?.quantity : parseFloat(item?.price) * item?.quantity}$ </p>
                                    
                                     <button className='cartbtn' onClick={() => decreaseQuantity(item?.id)}><i class="fa-solid fa-minus"></i></button>
                                     
@@ -63,6 +68,12 @@ const Cart = ({date,setDate}) => {
                 </ul>
             }
         </div >
+        <BookingModal
+        setBookingSuccess={setBookingSuccess}
+        openBooking={openBooking}
+        handleBookingClose={handleBookungClose}
+        ></BookingModal>
+        </>
     );
 };
 

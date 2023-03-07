@@ -33,7 +33,9 @@ import AddBlog from '../../AddBlog/AddBlog';
 import AdminRoute from '../../Login/Login/AdminRoute/AdminRoute';
 import AddTrending from '../../AddTrending/AddTrending';
 import AddBestSeller from '../../AddBestSeller/AddBestSeller';
+import booking from'../../Booking/Booking';
 import { Button } from '@mui/material';
+import Booking from '../../Booking/Booking';
 
 const drawerWidth = 200;
 
@@ -51,15 +53,17 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <div className='public-dashboard'>
-      <Link to="/home" className='NevigationText'><Button variant="outlined">Home</Button></Link>
-      <Link to={`${url}`} className='NevigationText'><Button variant="outlined">Dashboard</Button></Link>
+      <Link to="/home" className='NevigationText'><Button className='buttond' >Home</Button></Link>
+      <Link to={`${url}`} className='NevigationText'><Button className='buttond' >Dashboard</Button></Link>
+      <Link to={`${url}/booking`} className='NevigationText'><Button className='buttond' >Booking</Button></Link>
       </div>
       {admin && <Box>
        <div  className='dashboard'>
-       <Link to={`${url}/makeAdmin`} className='NevigationText'><Button variant="outlined">Make Admin</Button></Link>
-      <Link to={`${url}/addblog`} className='NevigationText'><Button variant="outlined">Add Blog</Button></Link>
-      <Link to={`${url}/addbestseller`} className='NevigationText'><Button variant="outlined">Add Best Seller</Button></Link>
-      <Link to={`${url}/addtrending`} className='NevigationText'><Button variant="outlined">Add Trending</Button></Link>
+       <Link to={`${url}/makeAdmin`} className='NevigationText'><Button className='buttond' >Make Admin</Button></Link>
+      <Link to={`${url}/addblog`} className='NevigationText'><Button className='buttond' >Add Blog</Button></Link>
+      <Link to={`${url}/addbestseller`} className='NevigationText'><Button className='buttond' >Add Best Seller</Button></Link>
+      <Link to={`${url}/addtrending`} className='NevigationText'><Button className='buttond' >Add Trending</Button></Link>
+      
        </div>
       </Box>
 
@@ -148,7 +152,7 @@ function Dashboard(props) {
         <Typography paragraph>
         <Switch>
         <Route exact path={path}>
-          <h3>Coming Soon</h3>
+          <h3>Welcome ot Dashboard</h3>
         </Route>
         <AdminRoute path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
@@ -161,6 +165,9 @@ function Dashboard(props) {
         </AdminRoute>
         <AdminRoute path={`${path}/addbestseller`}>
        <AddBestSeller></AddBestSeller>
+        </AdminRoute>
+        <AdminRoute path={`${path}/booking`}>
+       <Booking></Booking>
         </AdminRoute>
       </Switch>
           

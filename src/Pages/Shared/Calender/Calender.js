@@ -5,8 +5,8 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import StaticDatePicker from '@mui/lab/StaticDatePicker';
 
-
-const Calender = ({date,setDate}) => {
+const Calender = () => {
+  const [date,setDate] = React.useState(new Date());
     return (
         <LocalizationProvider dateAdapter={AdapterDateFns}>
         <StaticDatePicker

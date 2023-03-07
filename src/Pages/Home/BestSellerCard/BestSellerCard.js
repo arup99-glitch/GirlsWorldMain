@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions, Grid, Rating } from '@mui/material';
+import { Alert, Button, CardActionArea, CardActions, Grid, Rating } from '@mui/material';
 import BestSellerModal from '../../Shared/Modal/BestSellerModal';
 
 const BestSellerCard = ({cardDetails}) => {
  
     const {name,price,img} = cardDetails;
     const [open, setOpen] = React.useState(false);
+    const [success, setSuccess] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     return (
@@ -36,6 +37,7 @@ const BestSellerCard = ({cardDetails}) => {
         <Button onClick={handleOpen} size="small" color="primary">
           Add to Cart
         </Button>
+        {success && <Alert severity='success'>Make Admin Successfully</Alert>}
       </CardActions>
       <Rating name="half-rating" defaultValue={4.5} precision={0.5} />
     </Card>

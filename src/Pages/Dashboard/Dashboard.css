@@ -16,3 +16,13 @@
     padding-left: 10%;
     font-family: "Lucida Console", "Courier New", monospace;
 }
+.buttond{
+    border: none;
+    text-decoration: none;
+    color: rgb(179, 169, 169);
+}
+.NevigationText{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}

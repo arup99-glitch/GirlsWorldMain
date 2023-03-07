@@ -11,6 +11,7 @@ import banner4 from '../../../images/banner4.png'
 
 import background from '../../../images/background1.png'
 import { Button, Container } from '@mui/material';
+import { Nav } from 'react-bootstrap';
 
 const Navication = () => {
     return (
@@ -20,7 +21,7 @@ const Navication = () => {
     <div className="background-text">
     <h6>NEW WOMEN COLOTHING</h6>
     <h1>Autumn Jeckets<br /> Collection In 2022</h1>
-    <Button variant="outlined">Shop Now</Button>
+    <Button variant="outlined"><Nav.Link href="/shop">Shop</Nav.Link></Button>
   </div>
     </div>
     <Container >
@@ -35,7 +36,7 @@ const Navication = () => {
        <h2> Catch the Sun:<br />
             Summer Break Styles<br />
             From $5.99</h2>
-            <button>View All</button>
+            <Button variant="outlined"><Nav.Link href="/shop">View All</Nav.Link></Button>
        </div>
         </Grid>
         <Grid className='banner' item xs={12} md={6}>
@@ -47,7 +48,7 @@ const Navication = () => {
        <h2> Catch the Sun:<br />
             Summer Break Styles<br />
             From $5.99</h2>
-            <button>View All</button>
+            <Button variant="outlined"><Nav.Link href="/shop">View All</Nav.Link></Button>
        </div>
         </Grid>
         <Grid className='banner'  item xs={12} md={8}>
@@ -57,7 +58,7 @@ const Navication = () => {
        <h2> Catch the Sun:<br />
             Summer Break Styles<br />
             From $5.99</h2>
-            <button>View All</button>
+            <Button variant="outlined"><Nav.Link href="/shop">view all</Nav.Link></Button>
        </div>
         </Grid>
         <Grid className='banner' item xs={12} md={4}>
@@ -66,7 +67,7 @@ const Navication = () => {
        <h2> Catch the Sun:<br />
             Summer Break Styles<br/>
             From $5.99</h2>
-            <button>View All</button>
+            <Button variant="outlined"><Nav.Link href="/shop">View All</Nav.Link></Button>
        </div>
         </Grid>
       </Grid>
