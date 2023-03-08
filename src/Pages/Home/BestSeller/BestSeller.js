@@ -68,7 +68,7 @@ import BestSellerCard from '../BestSellerCard/BestSellerCard';
 const BestSeller = () => {
   const [cardDetails, setCardDetails] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/bestseller')
+    fetch('https://girls-worls-server-main-production.up.railway.app/bestseller')
       .then(res => res.json())
       .then(data => {
         setCardDetails(data);

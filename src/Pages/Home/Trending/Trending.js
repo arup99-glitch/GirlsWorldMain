@@ -66,7 +66,7 @@ import TrendingCard from '../TrendingCard/TrendingCard';
 const Trending = () => {
     const [trendingCard ,setTrending] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/trending')
+        fetch('https://girls-worls-server-main-production.up.railway.app/trending')
         .then(res => res.json())
         .then(data => setTrending(data));
     },[])

@@ -7,14 +7,14 @@ const AddBlog = () => {
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = async data =>{
         try {
-            // const result = await axios.post('http://localhost:5000/services',data)
+            // const result = await axios.post('https://girls-worls-server-main-production.up.railway.app/services',data)
 
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             };
-          fetch('http://localhost:5000/blogs', requestOptions)
+          fetch('https://girls-worls-server-main-production.up.railway.app/blogs', requestOptions)
           .then(response => response.json())
           .then(data => console.log(data));
           reset();

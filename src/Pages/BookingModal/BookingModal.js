@@ -44,7 +44,7 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
             // date: date.to.localDateString,
          }
         //send to the server
-        fetch('http://localhost:5000/booking',{
+        fetch('https://girls-worls-server-main-production.up.railway.app/booking',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'
