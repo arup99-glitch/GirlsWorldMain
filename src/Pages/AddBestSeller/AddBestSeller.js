@@ -6,14 +6,14 @@ const AddBestSeller = () => {
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = async data =>{
         try {
-            // const result = await axios.post('https://girls-worls-server-main-production.up.railway.app/services',data)
+            // const result = await axios.post('https://girls-worls-server-main-production-af95.up.railway.app/services',data)
 
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             };
-          fetch('https://girls-worls-server-main-production.up.railway.app/bestseller', requestOptions)
+          fetch('https://girls-worls-server-main-production-af95.up.railway.app/bestseller', requestOptions)
           .then(response => response.json())
           .then(data => console.log(data));
           reset();

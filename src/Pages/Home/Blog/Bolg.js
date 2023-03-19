@@ -65,7 +65,7 @@ import BlogCard from '../BlogCard/BlogCard';
 const Bolg = () => {
     const [blog,setMainBlog] = useState([])
     useEffect(() => {
-        fetch('https://girls-worls-server-main-production.up.railway.app/blogs')
+        fetch('https://girls-worls-server-main-production-af95.up.railway.app/blogs')
         .then(res => res.json())
         .then(data => setMainBlog(data));
     },[])

@@ -70,14 +70,14 @@ const BestSeller = () => {
   const [cardDetails, setCardDetails] = useState([]);
   const [trendingCard ,setTrending] = useState([]);
   useEffect(() => {
-    fetch('https://girls-worls-server-main-production.up.railway.app/bestseller')
+    fetch('https://girls-worls-server-main-production-af95.up.railway.app/bestseller')
       .then(res => res.json())
       .then(data => {
         setCardDetails(data);
       });
   }, [])
   useEffect(() => {
-    fetch('https://girls-worls-server-main-production.up.railway.app/bestseller')
+    fetch('https://girls-worls-server-main-production-af95.up.railway.app/bestseller')
       .then(res => res.json())
       .then(data => {
         setTrending(data);
