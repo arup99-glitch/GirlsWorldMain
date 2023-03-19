@@ -26,6 +26,7 @@ const BestSellerCard = ({cardDetails}) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
+           
            {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">

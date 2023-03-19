@@ -24,7 +24,7 @@ const Register = () => {
         e.preventDefault();
     }
     return (
-        <Container>
+        <Container className='Bregister'>
             <Grid className='registerform' sx={{mt:8}}>
                 <Typography className='registertext' variant="body1" gutterButton><h2>Register</h2></Typography>
                 { !isLoading && <form onSubmit={handleLoginSubmit}>

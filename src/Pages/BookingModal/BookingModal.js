@@ -87,7 +87,7 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
           
           sx={{width:'90%',margin:2}}
           id="outlined-size-small"
-          defaultValue="time"
+          label="time"
           size="small"
         />
          <TextField
@@ -103,6 +103,7 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
           
           sx={{width:'90%',margin:2}}
           id="outlined-size-small"
+          
           name="email"
           onBlur={handleOnBlur}
           defaultValue={user.email}
@@ -112,7 +113,9 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
           
           sx={{width:'90%',margin:2}}
           id="outlined-size-small"
-          name="phone"
+          label="Your Nmber" 
+                 type="Number"
+                 name="phone"
           onBlur={handleOnBlur}
           defaultValue="Phone Number"
           size="small"
@@ -121,9 +124,10 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
           
           sx={{width:'90%',margin:2}}
           id="outlined-size-small"
+          label="Transation ID"
           name="Bkash"
           onBlur={handleOnBlur}
-          defaultValue="Transation ID"
+          
           size="small"
         />
          <TextField
@@ -132,9 +136,10 @@ const BookingModal = ({openBooking,handleBookingClose,setBookingSuccess}) => {
           name="date"
           id="outlined-size-small"
           onBlur={handleOnBlur}
-          defaultValue="mm/dd/yy"
+          label="mm/dd/yy"
           size="small"
         />
+       
       
         <Button type="submit" variant="contained">Submit</Button>
            </form>

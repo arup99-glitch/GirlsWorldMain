@@ -10,7 +10,8 @@ const Shop = () => {
             <FirstNevigation></FirstNevigation>
             <BestSeller></BestSeller>
             <hr></hr>
-            <Trending></Trending>
+            {/* <Trending></Trending> */}
+            {/* <BestSeller></BestSeller> */}
            
         </div>
     );

@@ -7,6 +7,7 @@ const TrendingCard = ({trendingCard}) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+  
     return (
       <>
         <Grid item sx={{ pb: 2, }} xs={12} sm={6} md={3}>
@@ -28,7 +29,8 @@ const TrendingCard = ({trendingCard}) => {
     </CardContent>
   </CardActionArea>
   <CardActions>
-    <Button onClick={handleOpen}  size="small" color="primary">
+    <Button onClick={handleOpen }  size="small" color="primary">
+    
       Add to Cart
     </Button>
   </CardActions>

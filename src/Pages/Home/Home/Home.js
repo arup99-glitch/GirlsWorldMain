@@ -15,7 +15,8 @@ const Home = () => {
             <Navication></Navication>
             <BestSeller></BestSeller>
             <SeasonSale></SeasonSale>
-            <Trending></Trending>
+            {/* <Trending></Trending> */}
+            {/* <BestSeller></BestSeller> */}
             <Blog></Blog>
             <Subscribe></Subscribe>
             <Footer></Footer>

@@ -56,6 +56,8 @@ function Dashboard(props) {
       <Link to="/home" className='NevigationText'><Button className='buttond' >Home</Button></Link>
       <Link to={`${url}`} className='NevigationText'><Button className='buttond' >Dashboard</Button></Link>
       <Link to={`${url}/booking`} className='NevigationText'><Button className='buttond' >Booking</Button></Link>
+      
+      
       </div>
       {admin && <Box>
        <div  className='dashboard'>
@@ -63,6 +65,7 @@ function Dashboard(props) {
       <Link to={`${url}/addblog`} className='NevigationText'><Button className='buttond' >Add Blog</Button></Link>
       <Link to={`${url}/addbestseller`} className='NevigationText'><Button className='buttond' >Add Best Seller</Button></Link>
       <Link to={`${url}/addtrending`} className='NevigationText'><Button className='buttond' >Add Trending</Button></Link>
+      <Link to={`${url}/booking`} className='NevigationText'><Button className='buttond' >Booking</Button></Link>
       
        </div>
       </Box>
@@ -153,6 +156,9 @@ function Dashboard(props) {
         <Switch>
         <Route exact path={path}>
           <h3>Welcome ot Dashboard</h3>
+        </Route>
+        <Route path={`${path}/booking`}>
+       <Booking></Booking>
         </Route>
         <AdminRoute path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>

@@ -71,6 +71,7 @@ const Trending = () => {
         .then(data => setTrending(data));
     },[])
     return (
+      <>
         <Container sx={{ mb: 5 }}>
           <Grid sx={{ mt: 5 }} ><h1>Trending</h1></Grid>
           
@@ -87,6 +88,7 @@ const Trending = () => {
           <Button sx={{ mt: 5,mb:5 }} variant="outlined">More Products</Button>
           <hr></hr>
         </Container>
+        </>
     );
 };
 

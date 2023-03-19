@@ -45,8 +45,7 @@ const Booking = () => {
               </TableCell>
               <TableCell align="right">{row.date}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
-              <TableCell align="right">{row.Bkash
-              }</TableCell>
+              <TableCell align="right">{row.Bkash}</TableCell>
               <TableCell align="right">Accepted
               </TableCell>
               
